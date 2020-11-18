@@ -16,66 +16,58 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
+import HeaderLinks from "./HeaderLinks.js";
+
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
+  const color = "transparent";
+  const { brand, fixed, absolute } = props;
   const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  React.useEffect(() => {
-    if (props.changeColorOnScroll) {
-      window.addEventListener("scroll", headerColorChange);
-    }
-    return function cleanup() {
-      if (props.changeColorOnScroll) {
-        window.removeEventListener("scroll", headerColorChange);
-      }
-    };
-  });
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const headerColorChange = () => {
-    const { color, changeColorOnScroll } = props;
-    const windowsScrollTop = window.pageYOffset;
-    if (windowsScrollTop > changeColorOnScroll.height) {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[changeColorOnScroll.color]);
-    } else {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[changeColorOnScroll.color]);
-    }
-  };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
+
+  /** Drawer Toggle */
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  /** Controlling the header effect to change color on scroll */
+  React.useEffect(() => {
+    window.addEventListener("scroll", headerColorChange);
+    return function cleanup() {
+      window.removeEventListener("scroll", headerColorChange);
+    };
+  });
+
+  const headerColorChange = () => {
+    const normalColor = color;
+    const windowsScrollTop = window.pageYOffset;
+    const limitHeight = 400;
+    const scrolledColor = "white";
+    let classList = document.body.getElementsByTagName("header")[0].classList;
+    if (windowsScrollTop > limitHeight) {
+      classList.remove(classes[normalColor]);
+      classList.add(classes[scrolledColor]);
+    } else {
+      classList.add(classes[normalColor]);
+      classList.remove(classes[scrolledColor]);
+    }
+  };
+
   const brandComponent = <Button className={classes.title}>{brand}</Button>;
+
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
-        {leftLinks !== undefined ? brandComponent : null}
-        <div className={classes.flex}>
-          {leftLinks !== undefined ? (
-            <Hidden smDown implementation="css">
-              {leftLinks}
-            </Hidden>
-          ) : (
-            brandComponent
-          )}
-        </div>
+        {brandComponent}
         <Hidden smDown implementation="css">
-          {rightLinks}
+          <HeaderLinks />
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -98,8 +90,7 @@ export default function Header(props) {
           onClose={handleDrawerToggle}
         >
           <div className={classes.appResponsive}>
-            {leftLinks}
-            {rightLinks}
+            <HeaderLinks />
           </div>
         </Drawer>
       </Hidden>
@@ -112,40 +103,7 @@ Header.defaultProp = {
 };
 
 Header.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "transparent",
-    "white",
-    "rose",
-    "dark"
-  ]),
-  rightLinks: PropTypes.node,
-  leftLinks: PropTypes.node,
   brand: PropTypes.string,
   fixed: PropTypes.bool,
   absolute: PropTypes.bool,
-  // this will cause the sidebar to change the color from
-  // props.color (see above) to changeColorOnScroll.color
-  // when the window.pageYOffset is heigher or equal to
-  // changeColorOnScroll.height and then when it is smaller than
-  // changeColorOnScroll.height change it back to
-  // props.color (see above)
-  changeColorOnScroll: PropTypes.shape({
-    height: PropTypes.number.isRequired,
-    color: PropTypes.oneOf([
-      "primary",
-      "info",
-      "success",
-      "warning",
-      "danger",
-      "transparent",
-      "white",
-      "rose",
-      "dark"
-    ]).isRequired
-  })
 };
