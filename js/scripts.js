@@ -1,6 +1,7 @@
 'use sctrict';
 
 import { buildBlogSection } from './blog.js';
+import { buildCareerSection } from './career.js';
 
 /**
  * Make Header anchor links scroll smoothly
@@ -27,4 +28,5 @@ $(() => {
     activateSmoothScroll();
     setupContactButton();
     buildBlogSection();
+    buildCareerSection();
 });

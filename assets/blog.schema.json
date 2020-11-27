@@ -4,29 +4,6 @@
     "type": "object",
     "title": "Schema for Blog Posts",
     "description": "This Schema is meant to validate blog.json files composing the blog section of the website.",
-    "default": {},
-    "examples": [
-        {
-            "blogPosts": [
-                {
-                    "type": "video",
-                    "source": "youtube",
-                    "urlCode": "J_HAsKN_m14",
-                    "date": "2020-10-01",
-                    "title": "Como funciona o Hacktoberfest?",
-                    "description": "Description text comprising of multiple lines. You can use \n to break lines."
-                },
-                {
-                    "type": "article",
-                    "source": "LinkedIn Pulse",
-                    "url": "https://www.linkedin.com/pulse/ted-tale-burnout-tulio-leao",
-                    "date": "2020-05-14",
-                    "title": "TED e uma história de Burnout",
-                    "description": "Description text comprising of multiple lines. You can use \n to break lines."
-                }
-            ]
-        }
-    ],
     "required": [
         "blogPosts"
     ],
@@ -36,8 +13,7 @@
             "type": "array",
             "title": "The blogPosts schema",
             "description": "Array of blog posts",
-            "default": [],
-            "additionalItems": true,
+            "additionalItems": false,
             "items": {
                 "$id": "#/properties/blogPosts/items",
                 "anyOf": [
@@ -45,7 +21,6 @@
                         "$id": "#/properties/blogPosts/items/video",
                         "type": "object",
                         "title": "Object schema for 'video' type of blog posts.",
-                        "default": {},
                         "required": [
                             "type",
                             "source",
@@ -58,26 +33,22 @@
                             "type": {
                                 "$id": "#/properties/blogPosts/items/video/properties/type",
                                 "type": "string",
-                                "default": "",
-                                "examples": [
-                                    "video"
-                                ]
+                                "enum": ["video"]
                             },
                             "source": {
                                 "$id": "#/properties/blogPosts/items/video/properties/source",
                                 "type": "string",
                                 "title": "The source schema",
                                 "description": "For 'video' type, will be used to get the embed code, and on the title.",
-                                "default": "",
+                                "enum": ["YouTube"],
                                 "examples": [
-                                    "youtube"
+                                    "YouTube"
                                 ]
                             },
                             "urlCode": {
                                 "$id": "#/properties/blogPosts/items/video/properties/urlCode",
                                 "type": "string",
-                                "description": "Take the code from the YouTube URL",
-                                "default": "",
+                                "description": "Take the code from the YouTube URL, in case of YouTube source",
                                 "examples": [
                                     "J_HAsKN_m14"
                                 ]
@@ -86,7 +57,6 @@
                                 "$id": "#/properties/blogPosts/items/video/properties/date",
                                 "type": "string",
                                 "description": "Use format YYYY-MM-DD",
-                                "default": "",
                                 "examples": [
                                     "2020-10-01"
                                 ]
@@ -94,7 +64,6 @@
                             "title": {
                                 "$id": "#/properties/blogPosts/items/video/properties/title",
                                 "type": "string",
-                                "default": "",
                                 "examples": [
                                     "Como funciona o Hacktoberfest?"
                                 ]
@@ -102,20 +71,18 @@
                             "description": {
                                 "$id": "#/properties/blogPosts/items/video/properties/description",
                                 "type": "string",
-                                "default": "",
                                 "examples": [
                                     "Description text comprising of multiple lines. You can use \n to break lines."
                                 ]
                             }
                         },
-                        "additionalProperties": true
+                        "additionalProperties": false
                     },
                     {
                         "$id": "#/properties/blogPosts/items/article",
                         "type": "object",
                         "title": "Object schema for 'article' type of blog posts.",
                         "description": "An explanation about the purpose of this instance.",
-                        "default": {},
                         "required": [
                             "type",
                             "source",
@@ -128,16 +95,12 @@
                             "type": {
                                 "$id": "#/properties/blogPosts/items/article/properties/type",
                                 "type": "string",
-                                "default": "",
-                                "examples": [
-                                    "article"
-                                ]
+                                "enum": ["article"]
                             },
                             "source": {
                                 "$id": "#/properties/blogPosts/items/article/properties/source",
                                 "type": "string",
                                 "description": "For 'article' type, will be used on the title.",
-                                "default": "",
                                 "examples": [
                                     "LinkedIn Pulse"
                                 ]
@@ -146,7 +109,6 @@
                                 "$id": "#/properties/blogPosts/items/article/properties/url",
                                 "type": "string",
                                 "description": "Direct URL to be used in 'Read More' link.",
-                                "default": "",
                                 "examples": [
                                     "https://www.linkedin.com/pulse/ted-tale-burnout-tulio-leao"
                                 ]
@@ -155,15 +117,13 @@
                                 "$id": "#/properties/blogPosts/items/article/properties/date",
                                 "type": "string",
                                 "description": "Use format YYYY-MM-DD",
-                                "default": "",
                                 "examples": [
                                     "2020-05-14"
                                 ]
                             },
                             "title": {
-                                "$id": "#/properties/blogPosts/items/video/properties/title",
+                                "$id": "#/properties/blogPosts/items/article/properties/title",
                                 "type": "string",
-                                "default": "",
                                 "examples": [
                                     "TED e uma história de Burnout"
                                 ]
@@ -171,17 +131,16 @@
                             "description": {
                                 "$id": "#/properties/blogPosts/items/article/properties/description",
                                 "type": "string",
-                                "default": "",
                                 "examples": [
                                     "Description text comprising of multiple lines. You can use \n to break lines."
                                 ]
                             }
                         },
-                        "additionalProperties": true
+                        "additionalProperties": false
                     }
                 ]
             }
         }
     },
-    "additionalProperties": true
+    "additionalProperties": false
 }
