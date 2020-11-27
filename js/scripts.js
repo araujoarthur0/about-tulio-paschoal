@@ -24,8 +24,20 @@ function setupContactButton() {
     });
 }
 
+function setupTopButton() {
+    function scrollToTop() {
+        // Scroll to top logic
+        document.documentElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+    $("#navbar-title").on('click', scrollToTop);
+}
+
 $(() => {
     activateSmoothScroll();
+    setupTopButton();
     setupContactButton();
     buildBlogSection();
     buildCareerSection();
