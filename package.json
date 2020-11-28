@@ -8,6 +8,7 @@
     "example": "root"
   },
   "scripts": {
+    "deploy": "gulp deploy",
     "start": "gulp open-app",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp-watch"
@@ -21,6 +22,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "^0.4.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-install": "^1.1.0",
     "gulp-preprocess": "^3.0.3",
     "gulp-sass": "^4.0.2",
