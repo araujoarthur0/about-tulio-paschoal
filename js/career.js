@@ -1,3 +1,5 @@
+'use strict';
+
 import { startTimeline } from './vertical-timeline.js';
 
 function buildCareerFromJson(json) {

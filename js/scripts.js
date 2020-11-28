@@ -2,6 +2,7 @@
 
 import { buildBlogSection } from './blog.js';
 import { buildCareerSection } from './career.js';
+import { buildProjectsSection } from './projects.js';
 
 /**
  * Make Header anchor links scroll smoothly
@@ -41,4 +42,5 @@ $(() => {
     setupContactButton();
     buildBlogSection();
     buildCareerSection();
+    buildProjectsSection();
 });

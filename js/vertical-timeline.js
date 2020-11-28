@@ -1,6 +1,8 @@
 // Original Version: Vertical Timeline - by CodyHouse.co
 // Adapted for use here
 
+'use strict';
+
 function startTimeline() {
 
     function VerticalTimeline(element) {

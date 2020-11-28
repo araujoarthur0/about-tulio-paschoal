@@ -1,6 +1,5 @@
 @import "colors";
 @import "vertical-timeline";
-
 .navbar-nav,
 .navbar-title {
     user-select: none;
@@ -23,11 +22,11 @@
     background-position-y: bottom, bottom;
     background-repeat: no-repeat, no-repeat;
     background-color: #0d0e0e;
-
-    .top-section-link, .top-section-link:hover, .top-section-link:active {
+    .top-section-link,
+    .top-section-link:hover,
+    .top-section-link:active {
         color: white;
     }
-
     @media (max-width: 990px) {
         background-size: 600px, 2000px;
     }
@@ -37,47 +36,39 @@
     .date {
         font-weight: bold;
     }
-
     $lg-breaking-max-width: 1500px;
     $lg-breaking-min-width: 1200px;
     $sm-breaking-max-width: 576px;
-
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before,
+    .slick-next:before {
         color: $secondary-title-color !important;
         font-size: 35px;
     }
-
     #blog-content {
-
         @media (max-width: $lg-breaking-max-width) and (min-width: $lg-breaking-min-width) {
             max-width: 1000px;
             margin: auto;
         }
-
         @media (max-width: $sm-breaking-max-width) {
             max-width: 80%;
             margin: auto;
         }
-
         .description {
             color: #999;
             overflow: hidden;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 15;
             display: -webkit-box;
-
             @media (max-width: $lg-breaking-min-width) {
                 -webkit-line-clamp: 10;
             }
         }
-
         .video-container {
             position: relative;
             padding-top: 47.25%;
             width: 85%;
             margin: 20px auto 20px auto;
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -86,7 +77,6 @@
             width: 100%;
             height: 100%;
         }
-
         .read-more {
             font-size: 40px;
             padding: 35px;
@@ -94,9 +84,9 @@
     }
 }
 
-#main-career, #main-contact {
+#main-career,
+#main-contact {
     background-color: $secondary-bg-color;
-
     .title {
         color: $secondary-title-color;
     }
@@ -110,5 +100,151 @@
     .form-control,
     .is-focused .form-control {
         background-image: linear-gradient(to top, #302f30 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #c1c0c0 1px, rgba(210, 210, 210, 0) 1px);
+    }
+}
+
+#main-projects {
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1440px;
+        }
+    }
+    #playground,
+    #information {
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: 600px;
+    }
+    #playground {
+        background-color: rgba(34, 170, 34, 0.103);
+        border-radius: 45px;
+        position: relative;
+        .playground-item {
+            background-color: rgba(34, 170, 34, 0.288);
+            position: absolute;
+            width: fit-content;
+            cursor: pointer;
+            transition: transform 200ms;
+            .playground-icon {
+                position: absolute;
+                z-index: 1;
+                height: 80%;
+                max-width: 100%;
+            }
+            .project-icon {
+                position: absolute;
+                z-index: 2;
+                height: 40%;
+                max-width: 100%;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .playground-random-item {
+            position: absolute;
+            width: fit-content;
+            .playground-icon {
+                position: absolute;
+                height: 50%;
+                max-width: 100%;
+                opacity: 0.3;
+            }
+        }
+        .playground-top-left,
+        .playground-bottom-right {
+            border-bottom-left-radius: 45px;
+            border-top-right-radius: 45px;
+        }
+        .playground-top-right,
+        .playground-bottom-left {
+            border-bottom-right-radius: 45px;
+            border-top-left-radius: 45px;
+        }
+        .playground-top-left,
+        .playground-top-right {
+            .playground-icon {
+                top: 0;
+            }
+            .project-icon {
+                bottom: 0;
+            }
+        }
+        .playground-bottom-left,
+        .playground-bottom-right {
+            .playground-icon {
+                bottom: 0;
+            }
+            .project-icon {
+                top: 0;
+            }
+        }
+        .playground-top-left,
+        .playground-bottom-left {
+            .playground-icon {
+                left: 0;
+            }
+            .project-icon {
+                right: 0;
+            }
+        }
+        .playground-top-right,
+        .playground-bottom-right {
+            .playground-icon {
+                right: 0;
+            }
+            .project-icon {
+                left: 0;
+            }
+        }
+        @media (max-width: 990px) {
+            display: none!important;
+        }
+    }
+    #information {
+        background-color: $secondary-bg-color;
+        border-radius: 45px;
+        padding: 20px;
+        .project-information-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            .project-information-img {
+                height: 40%;
+                text-align: center;
+                img {
+                    height: 100%;
+                }
+                @media (max-width: 990px) {
+                    height: 100px;
+                    max-width: 100%;
+                    margin: 25px 0 25px;
+                }
+            }
+            .project-information-gh-buttons {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                margin: 0 auto 0;
+            }
+            p {
+                font-size: 18px;
+                @media (max-width: 990px) {
+                    margin: 25px 0 25px;
+                }
+            }
+            @media (max-width: 990px) {
+                display: flex!important;
+            }
+        }
+
+        @media (max-width: 990px) {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            height: fit-content;
+        }
     }
 }

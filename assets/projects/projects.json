@@ -1,0 +1,32 @@
+{
+    "projects": [
+        {
+            "title": "JustDeleteMe",
+            "icon": "jdm.png",
+            "user": "jdm-contrib",
+            "repo": "jdm",
+            "description": "Um diretório de links diretos para deletar sua conta em serviços da web"
+        },
+        {
+            "title": "OpenRCT2",
+            "icon": "openrct2.png",
+            "user": "OpenRCT2",
+            "repo": "OpenRCT2",
+            "description": "Uma reimplementação \"open source\" do RollerCoaster Tycoon 2 🎢"
+        },
+        {
+            "title": "Brazilian Portuguese TED Translators style guide",
+            "icon": "ted.png",
+            "user": "tupaschoal",
+            "repo": "TED-Translators_PT-BR_Styleguide",
+            "description": "Guia de Estilo para Traduções e Transcrições do TED em Português (Brasil)"
+        },
+        {
+            "title": "Time To Leave",
+            "icon": "ttl.svg",
+            "user": "thamara",
+            "repo": "time-to-leave",
+            "description": "Registre horas de trabalho e seja notificado quando for a hora de ir e viver"
+        }
+    ]
+}
