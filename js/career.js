@@ -55,7 +55,7 @@ function buildCareerFromJson(json) {
 }
 
 function buildCareerSection() {
-    fetch("../assets/career.json")
+    fetch("assets/career.json")
         .then(response => response.json())
         .then(json => {
             buildCareerFromJson(json);

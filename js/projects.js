@@ -65,11 +65,11 @@ const icons = ['amusement-park-1.svg',
     'sports-ball.svg'];
 
 function getIconPath(icon) {
-    return '../assets/projects/playground/' + icon;
+    return 'assets/projects/playground/' + icon;
 }
 
 function getProjectIconPath(icon) {
-    return '../assets/projects/icons/' + icon;
+    return 'assets/projects/icons/' + icon;
 }
 
 const positioning = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
@@ -228,7 +228,7 @@ function buildProjectsFromJson(json) {
 }
 
 function buildProjectsSection() {
-    fetch("../assets/projects/projects.json")
+    fetch("assets/projects/projects.json")
         .then(response => response.json())
         .then(json => {
             buildProjectsFromJson(json);

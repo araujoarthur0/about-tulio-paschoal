@@ -63,7 +63,7 @@ function buildBlogFromJson(json) {
 }
 
 function buildBlogSection() {
-    fetch("../assets/blog.json")
+    fetch("assets/blog.json")
         .then(response => response.json())
         .then(json => {
             buildBlogFromJson(json);
