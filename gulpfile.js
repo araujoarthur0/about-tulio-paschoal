@@ -5,6 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const preprocess = require("gulp-preprocess");
 const ghPages = require('gulp-gh-pages');
+const del = require('del');
 
 const Paths = {
     baseDir: './',
@@ -64,6 +65,10 @@ gulp.task('browser-sync', function () {
     });
 });
 
+gulp.task('gh-pages-clean', function(){
+    return del('.publish', { force:true });
+});
+
 gulp.task('gh-pages', function () {
     return gulp.src('./**/*')
         .pipe(ghPages());
@@ -71,6 +76,6 @@ gulp.task('gh-pages', function () {
 
 gulp.task('build', gulp.series('compile-material-scss'), gulp.series('compile-scss'), gulp.series('html'));
 
-gulp.task('deploy', gulp.series('build', 'gh-pages'));
+gulp.task('deploy', gulp.series('build', 'gh-pages-clean', 'gh-pages'));
 
 gulp.task('open-app', gulp.parallel('watch', gulp.series('html', 'browser-sync')));
