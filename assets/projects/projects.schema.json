@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Schema for Projects section",
+    "description": "This Schema is meant to validate projects.json files composing the projects section of the website.",
+    "required": [
+        "projects"
+    ],
+    "properties": {
+        "projects": {
+            "$id": "#/properties/projects",
+            "type": "array",
+            "title": "The blogPosts schema",
+            "description": "Array of projects",
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/projects/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/projects/items/anyOf/0",
+                        "type": "object",
+                        "title": "Object schema for a project instance.",
+                        "required": [
+                            "title",
+                            "user",
+                            "repo",
+                            "description"
+                        ],
+                        "properties": {
+                            "title": {
+                                "$id": "#/properties/projects/items/anyOf/0/properties/title",
+                                "type": "string"
+                            },
+                            "icon": {
+                                "$id": "#/properties/projects/items/anyOf/0/properties/icon",
+                                "type": "string",
+                                "description": "Name of icon file with extension in assets/projects/icons folder"
+                            },
+                            "user": {
+                                "$id": "#/properties/projects/items/anyOf/0/properties/user",
+                                "type": "string",
+                                "description": "Github user of the project repository"
+                            },
+                            "repo": {
+                                "$id": "#/properties/projects/items/anyOf/0/properties/repo",
+                                "type": "string",
+                                "description": "Github project repository"
+                            },
+                            "description": {
+                                "$id": "#/properties/projects/items/anyOf/0/properties/description",
+                                "type": "string",
+                                "description": "Description that will be shown separately"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false
+}

@@ -70,7 +70,7 @@ gulp.task('gh-pages-clean', function(){
 });
 
 gulp.task('gh-pages', function () {
-    return gulp.src('*')
+    return gulp.src(['./**/*', '.nojekyll', '!partials/**', '!**.scss'])
         .pipe(ghPages());
 });
 
