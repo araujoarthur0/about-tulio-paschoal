@@ -74,8 +74,8 @@ gulp.task('gh-pages', function () {
         .pipe(ghPages());
 });
 
-gulp.task('build', gulp.series('compile-material-scss'), gulp.series('compile-scss'), gulp.series('html'));
+gulp.task('build', gulp.series('compile-material-scss', 'compile-scss', 'html'));
 
 gulp.task('deploy', gulp.series('build', 'gh-pages-clean', 'gh-pages'));
 
-gulp.task('open-app', gulp.parallel('watch', gulp.series('html', 'browser-sync')));
+gulp.task('open-app', gulp.parallel(gulp.series('build', 'browser-sync'), 'watch'));
