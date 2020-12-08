@@ -27,65 +27,114 @@
     .top-section-link:active {
         color: white;
     }
-    @media (max-width: 990px) {
+    @media (max-width: 991px) {
         background-size: 600px, 2000px;
     }
 }
 
-#section-blog {
-    .date {
-        font-weight: bold;
+#main-about {
+    .title {
+        margin-bottom: 45px;
     }
-    $lg-breaking-max-width: 1500px;
-    $lg-breaking-min-width: 1200px;
-    $sm-breaking-max-width: 576px;
-    .slick-prev:before,
-    .slick-next:before {
-        color: $secondary-title-color !important;
-        font-size: 35px;
+    #about-image {
+        max-width: 100%;
+        height: auto;
     }
-    #blog-content {
-        @media (max-width: $lg-breaking-max-width) and (min-width: $lg-breaking-min-width) {
-            max-width: 1000px;
-            margin: auto;
-        }
-        @media (max-width: $sm-breaking-max-width) {
-            max-width: 80%;
-            margin: auto;
-        }
-        .description {
-            color: #999;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 15;
-            display: -webkit-box;
-            @media (max-width: $lg-breaking-min-width) {
-                -webkit-line-clamp: 10;
+    #about-content {
+        text-align: left;
+        .title {
+            font-size: 2.25rem;
+            margin: 0 auto 25px;
+            
+            @media (max-width: 991px) {
+                font-size: 1.7rem;
+            }
+            @media (max-width: 768px) {
+                margin-top: 30px;
             }
         }
-        .video-container {
-            position: relative;
-            padding-top: 47.25%;
-            width: 85%;
-            margin: 20px auto 20px auto;
+        .description {
+            font-size: 18px;
+            margin-bottom: 50px;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .read-more {
-            font-size: 40px;
-            padding: 35px;
+        .skill-name {
+            font-weight: 400;
+            margin-bottom: 3px;
         }
     }
 }
 
-#main-career,
-#main-contact {
+#main-blog {
+    background-color: $secondary-bg-color;
+    h2.title {
+        color: $secondary-title-color;
+    }
+    #section-blog {
+        .date {
+            font-weight: bold;
+        }
+        $lg-breaking-max-width: 1500px;
+        $lg-breaking-min-width: 1200px;
+        $sm-breaking-max-width: 576px;
+        .slick-prev:before,
+        .slick-next:before {
+            color: $secondary-title-color !important;
+            font-size: 35px;
+        }
+        .slick-next {
+            right: -20px;
+        }
+        .slick-prev {
+            left: -32px;
+        }
+        #blog-content {
+            @media (max-width: $lg-breaking-max-width) and (min-width: $lg-breaking-min-width) {
+                max-width: 1000px;
+                margin: auto;
+            }
+            @media (max-width: $sm-breaking-max-width) {
+                max-width: 80%;
+                margin: auto;
+            }
+            .description {
+                color: #999;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 15;
+                display: -webkit-box;
+                padding: 25px;
+                @media (max-width: $lg-breaking-min-width) {
+                    -webkit-line-clamp: 10;
+                }
+            }
+            .video-container {
+                position: relative;
+                padding-top: 47.25%;
+                width: 85%;
+                margin: 20px auto 20px auto;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .read-more {
+                font-size: 40px;
+                padding: 35px;
+            }
+            .slick-list {
+                border-radius: 50px;
+                background: #fffefec7;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+#main-career {
     background-color: $secondary-bg-color;
     .title {
         color: $secondary-title-color;
