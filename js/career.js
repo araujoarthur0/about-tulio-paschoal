@@ -2,6 +2,14 @@
 
 import { startTimeline } from './vertical-timeline.js';
 
+function getPresentString(locale) {
+    if (locale == 'pt-BR') {
+        return 'Presente';
+    } else {
+        return 'Present';
+    }
+}
+
 function buildCareerFromJson(json) {
 
     function getDateString(date) {
@@ -27,7 +35,8 @@ function buildCareerFromJson(json) {
             case 'voluntary': iconWord = 'group'; break;
         }
 
-        const periodString = getDateString(element.start) + ' - ' + getDateString(element.end);
+        const endString = 'end' in element ? getDateString(element.end) : getPresentString('pt-BR'); 
+        const periodString = getDateString(element.start) + ' - ' + endString;
 
         return `
             <div class="cd-timeline__block">

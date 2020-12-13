@@ -26,7 +26,6 @@
                             "type",
                             "location",
                             "start",
-                            "end",
                             "position",
                             "longDescription"
                         ],
@@ -49,7 +48,7 @@
                             "end": {
                                 "$id": "#/properties/career/items/anyOf/0/properties/period",
                                 "type": "string",
-                                "description": "Write in format 'YYYY-MM' or 'Presente' if stil happening"
+                                "description": "Write in format 'YYYY-MM' avoid the property if stil happening"
                             },
                             "position": {
                                 "$id": "#/properties/career/items/anyOf/0/properties/position",
