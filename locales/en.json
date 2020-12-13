@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "Arthur"
+        ],
+        "last-updated": "2020-13-12",
+        "locale": "en"
+    },
+    "nav-header": "Example Application",
+    "top-section": {
+        "description": "I am a Software Engineer who loves challenges.<br>I'm happy to solve them, thrilled to present and delighted to explain.",
+        "go-down": "Go down to know more."
+    }
+}

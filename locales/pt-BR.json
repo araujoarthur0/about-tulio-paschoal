@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "Arthur"
+        ],
+        "last-updated": "2020-13-12",
+        "locale": "en"
+    },
+    "nav-header": "Example Application",
+    "top-section": {
+        "description": "Sou um engenheiro de software que ama desafios.<br>Fico feliz em resolvê-los, empolgado em apresentá-los e encantado em explicá-los.",
+        "go-down": "Desça para saber mais."
+    }
+}
