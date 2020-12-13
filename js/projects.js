@@ -1,5 +1,7 @@
 'use strict';
 
+let jsonContent;
+
 Array.prototype.random = function () {
     return this[Math.floor((Math.random() * this.length))];
 }
@@ -175,7 +177,7 @@ function buildPlayground(projects) {
     $("#playground").append(playgroundContent);
 }
 
-function getInformationCode(project) {
+function getInformationCode(project, id) {
     const projectIconPath = getProjectIconPath(project.icon);
     return `
         <div class='project-information-content' id="${project.user}-${project.repo}">
@@ -185,7 +187,7 @@ function getInformationCode(project) {
             <div class='project-information-img'>
                 <a href="https://github.com/${project.user}/${project.repo}"><img src='${projectIconPath}'></img></a>
             </div>
-            <p>
+            <p id="project-${id}-description">
                 ${project.description}
             </p>
             <div class='project-information-gh-buttons'>
@@ -196,8 +198,10 @@ function getInformationCode(project) {
 }
 
 function buildInformation(projects) {
+    let i = 0;
     for (const project of projects) {
-        $("#information").append(getInformationCode(project));
+        $("#information").append(getInformationCode(project, i));
+        i++;
     }
 }
 
@@ -227,11 +231,30 @@ function buildProjectsFromJson(json) {
     });
 }
 
+function changeLanguage() {
+    function updateProject(element, id, lng) {
+        const localeContent = element.locales[lng];
+        const description = localeContent.description;
+
+        $(`#project-${id}-description`).html(description);
+    }
+
+    i18next.on('languageChanged', function(lng) {
+        let i = 0;
+        for (const element of jsonContent.projects) {
+            updateProject(element, i, lng);
+            i++;
+        }
+    });
+}
+
 function buildProjectsSection() {
     fetch("assets/projects/projects.json")
         .then(response => response.json())
         .then(json => {
+            jsonContent = json;
             buildProjectsFromJson(json);
+            changeLanguage();
         });
 }
 
