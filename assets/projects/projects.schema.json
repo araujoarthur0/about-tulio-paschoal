@@ -25,7 +25,7 @@
                             "title",
                             "user",
                             "repo",
-                            "description"
+                            "locales"
                         ],
                         "properties": {
                             "title": {
@@ -47,10 +47,43 @@
                                 "type": "string",
                                 "description": "Github project repository"
                             },
-                            "description": {
-                                "$id": "#/properties/projects/items/anyOf/0/properties/description",
-                                "type": "string",
-                                "description": "Description that will be shown separately"
+                            "locales": {
+                                "$id": "#/properties/blogPosts/items/video/properties/locales",
+                                "type": "object",
+                                "required": [
+                                    "en",
+                                    "pt-BR"
+                                ],
+                                "properties": {
+                                    "en": {
+                                        "$id": "#/properties/blogPosts/items/video/properties/locales/properties/en",
+                                        "type": "object",
+                                        "required": [
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "description": {
+                                                "$id": "#/properties/projects/items/anyOf/0/properties/locales/properties/en/properties/description",
+                                                "type": "string",
+                                                "description": "Description that will be shown separately"
+                                            }
+                                        }
+                                    },
+                                    "pt-BR": {
+                                        "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/pt-BR",
+                                        "type": "object",
+                                        "required": [
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "description": {
+                                                "$id": "#/properties/projects/items/anyOf/0/properties/locales/properties/pt-BR/properties/description",
+                                                "type": "string",
+                                                "description": "Description that will be shown separately"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         },
                         "additionalProperties": false

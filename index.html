@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8" />
@@ -35,7 +35,7 @@
                 <div></div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="sr-only">Alterne a navegação</span>
+                    <span class="sr-only" data-i18n="nav-header.switch-navigation">Alterne a navegação</span>
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
@@ -44,33 +44,50 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#section-blog">
-                            <i class="material-icons">event_available</i> Novidades
+                        <a class="nav-link" href="#section-about">
+                            <i class="material-icons">portrait</i> <span data-i18n="about.title">Sobre Mim</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#section-career">
-                            <i class="material-icons">work</i> Carreira
+                            <i class="material-icons">work</i> <span data-i18n="career.title">Carreira</span>
                         </a>
                     </li>
                     <li class="dropdown nav-item">
                         <a class="nav-link" href="#section-projects">
-                            <i class="material-icons">build</i> Projetos
+                            <i class="material-icons">build</i> <span data-i18n="projects.title">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-blog">
+                            <i class="material-icons">event_available</i> <span data-i18n="blog.title">Novidades</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
                             href="https://www.linkedin.com/in/tulioleao" target="_blank"
-                            data-original-title="Entre em contato pelo Linkedin" rel="nofollow">
+                            data-original-title="Linkedin" rel="nofollow">
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
                             href="https://github.com/tupaschoal" target="_blank"
-                            data-original-title="Veja meus projetos no Github" rel="nofollow">
+                            data-original-title="GitHub" rel="nofollow">
                             <i class="fa fa-github"></i>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link i18n-item" rel="tooltip" data-placement="bottom"
+                            data-original-title="Veja o site em Português do Brasil" data-locale="pt-BR">
+                            <img src="assets/pt-BR.png"></img>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link i18n-item" rel="tooltip" data-placement="bottom"
+                            data-original-title="See the website in English" data-locale="en">
+                            <img src="assets/en.png"></img>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -82,10 +99,10 @@
                 <div class="col-md-8">
                     <h1 class="title">Tulio Paschoalin Leão</h1>
                     <h4>
-                        Dê-me um desafio.<br>
-                        Ficarei feliz em resolvê-lo, empolgado em apresentá-lo e encantado em explicá-lo.<br>
+                        <span data-i18n="[html]top-section.description">Sou um engenheiro de software que ama desafios.<br>
+                        Fico feliz em resolvê-los, empolgado em apresentá-los e encantado em explicá-los.</span><br>
                         <br>
-                        <a href="#main-blog" class="top-section-link"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;Desça para saber mais.</a>
+                        <a href="#main-about" class="top-section-link"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;<span data-i18n="top-section.go-down">Desça para saber mais.</span></a>
                     </h4>
                     <br>
                 </div>
@@ -93,16 +110,73 @@
         </div>
     </div>
     <div class="main main-raised">
-        <div id="main-blog">
+        <div id="main-about">
             <div class="container">
-                <div class="section text-center" id="section-blog">
+                <div class="section text-center" id="section-about">
                     <div class="row mb-lg-2">
                         <div class="col-md-8 ml-auto mr-auto">
-                            <h2 class="title"><i class="material-icons">event_available</i> Novidades</h2>
+                            <h2 class="title"><i class="material-icons">portrait</i> <span data-i18n="about.title">Sobre Mim</span></h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-12 offset-xl-0" id="blog-content">
+                        <div class="col-md-6 col-sm-12">
+                            <img id="about-image" src="assets/tulio.jpg"></img>
+                        </div>
+                        <div class="col-md-6 col-sm-12" id="about-content">
+                            <p class="title">Tulio Paschoalin Leão</p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.
+                                <br><br>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </p>
+                            <div class="skills">
+                                <div class="skill-name" data-i18n="about.motivation">Motivação</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                        <span class="sr-only">100%</span>
+                                    </div>
+                                </div>
+                                <div class="skill-name">C++</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                        <span class="sr-only">75%</span>
+                                    </div>
+                                </div>
+                                <div class="skill-name">Python</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                        <span class="sr-only">45%</span>
+                                    </div>
+                                </div>
+                                <div class="skill-name">Qt</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                        <span class="sr-only">85%</span>
+                                    </div>
+                                </div>
+                                <div class="skill-name" data-i18n="about.giving-back">Dar de volta</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                        <span class="sr-only">100%</span>
+                                    </div>
+                                </div>
+                                <div class="skill-name">GCC</div>
+                                <div class="progress progress-line-primary">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        <span class="sr-only">60%</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +185,7 @@
         <div id="main-career">
             <div class="container">
                 <div class="section text-center" id="section-career">
-                    <h2 class="title"><i class="material-icons">work</i> Carreira</h2>
+                    <h2 class="title"><i class="material-icons">work</i> <span data-i18n="career.title">Carreira</span></h2>
                     <div class="row">
                         <div class="col-md-12">
                             <section class="cd-timeline js-cd-timeline">
@@ -128,7 +202,7 @@
                 <div class="section text-center" id="section-projects">
                     <div class="row">
                         <div class="col-md-8 ml-auto mr-auto mb-5">
-                            <h2 class="title"><i class="material-icons">build</i> Projetos</h2>
+                            <h2 class="title"><i class="material-icons">build</i> <span data-i18n="projects.title">Projetos</span></h2>
                         </div>
                     </div>
                     <div class="row">
@@ -140,29 +214,44 @@
                 </div>
             </div>
         </div>
+        <div id="main-blog">
+            <div class="container">
+                <div class="section text-center" id="section-blog">
+                    <div class="row mb-lg-2">
+                        <div class="col-md-8 ml-auto mr-auto">
+                            <h2 class="title"><i class="material-icons">event_available</i> <span data-i18n="blog.title">Novidades</span></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-12 offset-xl-0" id="blog-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="main-contact">
             <div class="container">
                 <div class="section section-contacts" id="section-contacts">
                     <div class="row">
                         <div class="col-md-8 ml-auto mr-auto">
-                            <h2 class="text-center title"><i class="material-icons">mail</i> Entre em Contato</h2>
-                            <h4 class="text-center">Quer entrar em contato? Perguntar alguma coisa sobre os projetos? Me manda um e-mail!</h4>
+                            <h2 class="text-center title"><i class="material-icons">mail</i> <span data-i18n="contact.title">Entre em Contato</span></h2>
+                            <h4 class="text-center" data-i18n="contact.description">Quer entrar em contato? Perguntar alguma coisa sobre os projetos? Me manda um e-mail!</h4>
                             <form class="contact-form">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="bmd-label-floating" for="contact-subject">Assunto</label>
+                                            <label class="bmd-label-floating" for="contact-subject" data-i18n="contact.subject">Assunto</label>
                                             <input type="text" class="form-control" id="contact-subject">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="contact-message" class="bmd-label-floating">Sua mensagem</label>
+                                    <label for="contact-message" class="bmd-label-floating" data-i18n="contact.message">Sua mensagem</label>
                                     <textarea type="email" class="form-control" rows="4" id="contact-message"></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 ml-auto mr-auto text-center">
-                                        <button type="button" class="btn btn-primary btn-raised" id="button-contact">
+                                        <button type="button" class="btn btn-primary btn-raised" id="button-contact" data-i18n="contact.send-message">
                                             Enviar Mensagem
                                         </button>
                                     </div>
@@ -182,8 +271,9 @@
             &copy;
             <script>
                 document.write(new Date().getFullYear())
-            </script> - Template feito a partir do
-            <a href="https://github.com/creativetimofficial/material-kit" target="_blank">Material Kit</a>. Ícones dos projetos feitos por <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> do <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </script> - <span data-i18n="footer.template-made-from">Template feito a partir do</span>
+            <a href="https://github.com/creativetimofficial/material-kit" target="_blank">Material Kit</a>.&nbsp;
+            <span data-i18n="footer.icons-made-by">Ícones dos projetos feitos por</span> <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> - <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         </div>
     </div>
     <!--   Core JS Files   -->
@@ -198,5 +288,8 @@
     <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
     <script src="./material-assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
     <script src="./node_modules/slick-carousel/slick/slick.min.js" type="text/javascript"></script>
+    <script src="./node_modules/i18next/i18next.min.js" type="text/javascript"></script>
+    <script src="./node_modules/jquery-i18next/jquery-i18next.min.js" type="text/javascript"></script>
+    <script src="./node_modules/i18next-http-backend/i18nextHttpBackend.min.js" type="text/javascript"></script>
     <script src="./js/scripts.js" type="module"></script>
 </footer>

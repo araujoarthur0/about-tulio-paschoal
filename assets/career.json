@@ -2,51 +2,104 @@
     "career": [
         {
             "type": "work",
-            "location": "Cadence Design Systems",
             "start": "2014-12",
-            "end": "Presente",
-            "position": "Gerente de Engenharia de Software",
-            "longDescription": "Gerenciar e trabalhar num time estilo \"Skunkworks\" para desenvolver e implantar mudanças na arquitetura central do software: dando suporte a novos compiladores, atualizando bibliotecas, adotando padrões mais recentes de linguagens de programação, entre outros.\n\nComo Engenheiro de Software Líder, escrever especificações e desenvolver projetos de aplicações de Interface Gráfica de Usuário (GUI), para exploração de configuração de \"clock\", debug visual da síntese de um design e de laços combinacionais (loops).\n\nInfluência na liderança do escritório através da organização de eventos neste: conferências técnicas, eventos de arrecadação de dinheiro para instituições filantrópicas, oficinas de apresentação, dentre outros."
+            "locales": {
+                "pt-BR": {
+                    "location": "Cadence Design Systems",
+                    "position": "Gerente de Engenharia de Software",
+                    "longDescription": "Gerenciar e trabalhar num time estilo \"Skunkworks\" para desenvolver e implantar mudanças na arquitetura central do software: dando suporte a novos compiladores, atualizando bibliotecas, adotando padrões mais recentes de linguagens de programação, entre outros.\n\nComo Engenheiro de Software Líder, escrever especificações e desenvolver projetos de aplicações de Interface Gráfica de Usuário (GUI), para exploração de configuração de \"clock\", debug visual da síntese de um design e de laços combinacionais (loops).\n\nInfluência na liderança do escritório através da organização de eventos neste: conferências técnicas, eventos de arrecadação de dinheiro para instituições filantrópicas, oficinas de apresentação, dentre outros."
+                },
+                "en": {
+                    "location": "Cadence Design Systems",
+                    "position": "Software Engineering Manager",
+                    "longDescription": "Manage and work in a skunkworks team to design and deploy core software architecture changes: supporting new compilers, updating libraries, moving programming languages to newest standards and retiring others and more.\n\nAs Project Lead, write specifications and develop Graphical User Interface (GUI) projects, such as exploring clock setup, visual debug of design synthesis and combinatorial loops.\n\nInfluential in site leadership through organization of onsite events: technical conferences, fundraisers, presentation workshops, among others."
+                }
+            }
         },
         {
             "type": "voluntary",
-            "location": "TED Conferences",
             "start": "2013-10",
             "end": "2020-05",
-            "position": "Coordenador de Idioma",
-            "longDescription": "Coordenador de idioma para Português Brasileiro e Inglês. A função inclui aprovar traduções e revisões de outros tradutores, assim como orientá-los no processo de legendagem e como abordar cada tarefa."
+            "locales": {
+                "pt-BR": {
+                    "location": "TED Conferences",
+                    "position": "Coordenador de Idioma",
+                    "longDescription": "Coordenador de idioma para Português Brasileiro e Inglês. A função inclui aprovar traduções e revisões de outros tradutores, assim como orientá-los no processo de legendagem e como abordar cada tarefa."
+                },
+                "en": {
+                    "location": "TED Conferences",
+                    "position": "Language Coordinator",
+                    "longDescription": "Coordenador de idioma para Português Brasileiro e Inglês. A função inclui aprovar traduções e revisões de outros tradutores, assim como orientá-los no processo de legendagem e como abordar cada tarefa."
+                }
+            }
         },
         {
             "type": "education",
-            "location": "Universidade Federal de Minas Gerais",
             "start": "2010-08",
             "end": "2016-07",
-            "position": "Bacharelado em Engenharia de Controle e Automação",
-            "longDescription": "Injeção automática de falhas em designs SystemC"
+            "locales": {
+                "pt-BR": {
+                    "location": "Universidade Federal de Minas Gerais",
+                    "position": "Bacharelado em Engenharia de Controle e Automação",
+                    "longDescription": "Injeção automática de falhas em designs SystemC"
+                },
+                "en": {
+                    "location": "Federal University of Minas Gerais",
+                    "position": "BEng in Control and Automation Engineering",
+                    "longDescription": "Automatic Fault Injection into SystemC Designs."
+                }
+            }
         },
         {
             "type": "education",
-            "location": "University of Southampton",
             "start": "2013-09",
             "end": "2014-09",
-            "position": "Bacharelado em Engenharia Elétrica e Eletrônica",
-            "longDescription": "Via programa governamental de intercâmbio, Ciência sem Fronteiras"
+            "locales": {
+                "pt-BR": {
+                    "location": "University of Southampton",
+                    "position": "Bacharelado em Engenharia Elétrica e Eletrônica",
+                    "longDescription": "Via programa governamental de intercâmbio, Ciência sem Fronteiras"
+                },
+                "en": {
+                    "location": "University of Southampton",
+                    "position": "BEng in Electrical and Electronic Engineering",
+                    "longDescription": "Investigation on Iterative Learning Control (ILC) with Backstepping for autonomous surveillance with a quadrotor."
+                }
+            }
         },
         {
             "type": "work",
-            "location": "4 Ímpar",
             "start": "2012-08",
             "end": "2013-09",
-            "position": "Desenvolvedor Web",
-            "longDescription": "Desenvolver e manter um sistema de gerenciamento de conteúdo web (CMS)."
+            "locales": {
+                "pt-BR": {
+                    "location": "4 Ímpar",
+                    "position": "Desenvolvedor Web",
+                    "longDescription": "Desenvolver e manter um sistema de gerenciamento de conteúdo web (CMS)."
+                },
+                "en": {
+                    "location": "4 Ímpar",
+                    "position": "Web Developer",
+                    "longDescription": "Develop and maintain web Content Management Systems (CMS)."
+                }
+            }
         },
         {
             "type": "work",
-            "location": "Consultoria e Projetos Elétricos Júnior",
             "start": "2011-07",
             "end": "2012-08",
-            "position": "Assessor de Gestão",
-            "longDescription": "Responsável por divulgar e melhorar a visibilidade da tríade visão/objetivo/estratégia e dos indicadores dentro da empresa."
+            "locales": {
+                "pt-BR": {
+                    "location": "Consultoria e Projetos Elétricos Júnior",
+                    "position": "Assessor de Gestão",
+                    "longDescription": "Responsável por divulgar e melhorar a visibilidade da tríade visão/objetivo/estratégia e dos indicadores dentro da empresa."
+                },
+                "en": {
+                    "location": "Consultoria e Projetos Elétricos Júnior",
+                    "position": "Management Advisor",
+                    "longDescription": "Responsible for divulging and improving knowledge of vision/goal/strategy triad and Key Process Indicators (KPI) inside the company."
+                }
+            }
         }
     ]
 }

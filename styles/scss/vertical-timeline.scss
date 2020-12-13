@@ -178,18 +178,9 @@
     --cd-color-3-h: 207;
     --cd-color-3-s: 10%;
     --cd-color-3-l: 55%;
-    --cd-color-4: hsl(111, 51%, 60%);
-    --cd-color-4-h: 111;
-    --cd-color-4-s: 51%;
-    --cd-color-4-l: 60%;
-    --cd-color-5: hsl(356, 53%, 49%);
-    --cd-color-5-h: 356;
-    --cd-color-5-s: 53%;
-    --cd-color-5-l: 49%;
-    --cd-color-6: hsl(47, 85%, 61%);
-    --cd-color-6-h: 47;
-    --cd-color-6-s: 85%;
-    --cd-color-6-l: 61%;
+    --cd-color-4: #416de6;
+    --cd-color-5: #303979;
+    --cd-color-6: hsl(0, 0%, 51%);
     --cd-header-height: 200px;
     --font-primary: 'Droid Serif', serif;
     --font-secondary: 'Open Sans', sans-serif;
@@ -352,15 +343,12 @@
     }
 
     .cd-timeline__img--work {
-        background-color: hsl(111, 51%, 60%);
         background-color: var(--cd-color-4)
     }
     .cd-timeline__img--education {
-        background-color: hsl(356, 53%, 49%);
         background-color: var(--cd-color-5)
     }
     .cd-timeline__img--voluntary {
-        background-color: hsl(47, 85%, 61%);
         background-color: var(--cd-color-6)
     }
 

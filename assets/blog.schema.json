@@ -26,8 +26,7 @@
                             "source",
                             "urlCode",
                             "date",
-                            "title",
-                            "description"
+                            "locales"
                         ],
                         "properties": {
                             "type": {
@@ -61,19 +60,51 @@
                                     "2020-10-01"
                                 ]
                             },
-                            "title": {
-                                "$id": "#/properties/blogPosts/items/video/properties/title",
-                                "type": "string",
-                                "examples": [
-                                    "Como funciona o Hacktoberfest?"
-                                ]
-                            },
-                            "description": {
-                                "$id": "#/properties/blogPosts/items/video/properties/description",
-                                "type": "string",
-                                "examples": [
-                                    "Description text comprising of multiple lines. You can use \n to break lines."
-                                ]
+                            "locales": {
+                                "$id": "#/properties/blogPosts/items/video/properties/locales",
+                                "type": "object",
+                                "required": [
+                                    "en",
+                                    "pt-BR"
+                                ],
+                                "properties": {
+                                    "en": {
+                                        "$id": "#/properties/blogPosts/items/video/properties/locales/properties/en",
+                                        "type": "object",
+                                        "required": [
+                                            "title",
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "title": {
+                                                "$id": "#/properties/blogPosts/items/video/properties/locales/properties/en/properties/title",
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "$id": "#/properties/blogPosts/items/video/properties/locales/properties/en/properties/description",
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "pt-BR": {
+                                        "$id": "#/properties/blogPosts/items/video/properties/locales/properties/pt-BR",
+                                        "type": "object",
+                                        "required": [
+                                            "title",
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "title": {
+                                                "$id": "#/properties/blogPosts/items/video/properties/locales/properties/pt-BR/properties/title",
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "$id": "#/properties/blogPosts/items/video/properties/locales/properties/pt-BR/properties/description",
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         },
                         "additionalProperties": false
@@ -87,9 +118,7 @@
                             "type",
                             "source",
                             "url",
-                            "date",
-                            "title",
-                            "description"
+                            "date"
                         ],
                         "properties": {
                             "type": {
@@ -121,19 +150,51 @@
                                     "2020-05-14"
                                 ]
                             },
-                            "title": {
-                                "$id": "#/properties/blogPosts/items/article/properties/title",
-                                "type": "string",
-                                "examples": [
-                                    "TED e uma história de Burnout"
-                                ]
-                            },
-                            "description": {
-                                "$id": "#/properties/blogPosts/items/article/properties/description",
-                                "type": "string",
-                                "examples": [
-                                    "Description text comprising of multiple lines. You can use \n to break lines."
-                                ]
+                            "locales": {
+                                "$id": "#/properties/blogPosts/items/article/properties/locales",
+                                "type": "object",
+                                "required": [
+                                    "en",
+                                    "pt-BR"
+                                ],
+                                "properties": {
+                                    "en": {
+                                        "$id": "#/properties/blogPosts/items/article/properties/locales/properties/en",
+                                        "type": "object",
+                                        "required": [
+                                            "title",
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "title": {
+                                                "$id": "#/properties/blogPosts/items/article/properties/locales/properties/en/properties/title",
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "$id": "#/properties/blogPosts/items/article/properties/locales/properties/en/properties/description",
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "pt-BR": {
+                                        "$id": "#/properties/blogPosts/items/article/properties/locales/properties/pt-BR",
+                                        "type": "object",
+                                        "required": [
+                                            "title",
+                                            "description"
+                                        ],
+                                        "properties": {
+                                            "title": {
+                                                "$id": "#/properties/blogPosts/items/article/properties/locales/properties/pt-BR/properties/title",
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "$id": "#/properties/blogPosts/items/article/properties/locales/properties/pt-BR/properties/description",
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         },
                         "additionalProperties": false

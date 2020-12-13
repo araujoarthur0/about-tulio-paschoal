@@ -28,7 +28,10 @@
     "gulp-preprocess": "^3.0.3",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "i18next": "^19.8.4",
+    "i18next-http-backend": "^1.0.21",
     "jquery": "^3.5.1",
+    "jquery-i18next": "^1.2.1",
     "jquery-ui": "^1.12.1",
     "slick-carousel": "^1.8.1"
   }
