@@ -24,10 +24,8 @@
                         "default": {},
                         "required": [
                             "type",
-                            "location",
                             "start",
-                            "position",
-                            "longDescription"
+                            "locales"
                         ],
                         "properties": {
                             "type": {
@@ -35,10 +33,6 @@
                                 "type": "string",
                                 "title": "The type schema",
                                 "enum": ["education", "voluntary", "work"]
-                            },
-                            "location": {
-                                "$id": "#/properties/career/items/anyOf/0/properties/location",
-                                "type": "string"
                             },
                             "start": {
                                 "$id": "#/properties/career/items/anyOf/0/properties/period",
@@ -50,14 +44,63 @@
                                 "type": "string",
                                 "description": "Write in format 'YYYY-MM' avoid the property if stil happening"
                             },
-                            "position": {
-                                "$id": "#/properties/career/items/anyOf/0/properties/position",
-                                "type": "string"
-                            },
-                            "longDescription": {
-                                "$id": "#/properties/career/items/anyOf/0/properties/longDescription",
-                                "type": "string",
-                                "description": "Longer text appears only when hovering the box"
+                            "locales": {
+                                "$id": "#/properties/blogPosts/items/video/properties/locales",
+                                "type": "object",
+                                "required": [
+                                    "en",
+                                    "pt-BR"
+                                ],
+                                "properties": {
+                                    "en": {
+                                        "$id": "#/properties/blogPosts/items/video/properties/locales/properties/en",
+                                        "type": "object",
+                                        "required": [
+                                            "location",
+                                            "position",
+                                            "longDescription"
+                                        ],
+                                        "properties": {
+                                            "location": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/en/properties/location",
+                                                "type": "string"
+                                            },
+                                            "position": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/en/properties/position",
+                                                "type": "string"
+                                            },
+                                            "longDescription": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/en/properties/longDescription",
+                                                "type": "string",
+                                                "description": "Longer text appears only when hovering the box"
+                                            }
+                                        }
+                                    },
+                                    "pt-BR": {
+                                        "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/pt-BR",
+                                        "type": "object",
+                                        "required": [
+                                            "location",
+                                            "position",
+                                            "longDescription"
+                                        ],
+                                        "properties": {
+                                            "location": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/pt-BR/properties/location",
+                                                "type": "string"
+                                            },
+                                            "position": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/pt-BR/properties/position",
+                                                "type": "string"
+                                            },
+                                            "longDescription": {
+                                                "$id": "#/properties/career/items/anyOf/0/properties/locales/properties/pt-BR/properties/longDescription",
+                                                "type": "string",
+                                                "description": "Longer text appears only when hovering the box"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         },
                         "additionalProperties": false
