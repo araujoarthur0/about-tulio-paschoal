@@ -6,9 +6,36 @@
         "last-updated": "2020-13-12",
         "locale": "en"
     },
-    "nav-header": "Example Application",
+    "nav-header": {
+        "switch-navigation": "Switch navigation"
+    },
     "top-section": {
         "description": "I am a Software Engineer who loves challenges.<br>I'm happy to solve them, thrilled to present and delighted to explain.",
         "go-down": "Go down to know more."
+    },
+    "about": {
+        "title": "About Me",
+        "motivation": "Motivation",
+        "giving-back": "Giving Back"
+    },
+    "blog": {
+        "title": "News"
+    },
+    "career": {
+        "title": "Career"
+    },
+    "contact": {
+        "title": "Get in Contact",
+        "description": "Do you want to get in contact? Ask something about the projects? Send me an e-mail!",
+        "subject": "Subject",
+        "message": "Your message",
+        "send-message": "Send Message"
+    },
+    "projects": {
+        "title": "Projects"
+    },
+    "footer": {
+        "template-made-from": "Template made from",
+        "icons-made-by": "Project icons made by"
     }
 }

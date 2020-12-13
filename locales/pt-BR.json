@@ -6,9 +6,36 @@
         "last-updated": "2020-13-12",
         "locale": "en"
     },
-    "nav-header": "Example Application",
+    "nav-header": {
+        "switch-navigation": "Alterne a navegação"
+    },
     "top-section": {
         "description": "Sou um engenheiro de software que ama desafios.<br>Fico feliz em resolvê-los, empolgado em apresentá-los e encantado em explicá-los.",
         "go-down": "Desça para saber mais."
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "motivation": "Motivação",
+        "giving-back": "Dar de volta"
+    },
+    "blog": {
+        "title": "Novidades"
+    },
+    "career": {
+        "title": "Carreira"
+    },
+    "contact": {
+        "title": "Entre em Contato",
+        "description": "Quer entrar em contato? Perguntar alguma coisa sobre os projetos? Me manda um e-mail!",
+        "subject": "Assunto",
+        "message": "Sua mensagem",
+        "send-message": "Enviar Mensagem"
+    },
+    "projects": {
+        "title": "Projetos"
+    },
+    "footer": {
+        "template-made-from": "Template feito a partir do",
+        "icons-made-by": "Ícones dos projetos feitos por"
     }
 }
