@@ -1,0 +1,13 @@
+{
+    "js": [
+        "jquery/dist/jquery.min.js",
+        "slick-carousel/slick/slick.min.js",
+        "i18next/i18next.min.js",
+        "jquery-i18next/jquery-i18next.min.js",
+        "i18next-http-backend/i18nextHttpBackend.min.js"
+    ],
+    "css": [
+        "slick-carousel/slick/slick.css",
+        "slick-carousel/slick/slick-theme.css"
+    ]
+}

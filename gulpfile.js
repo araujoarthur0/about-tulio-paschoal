@@ -6,6 +6,7 @@ const browserSync = require('browser-sync').create();
 const preprocess = require("gulp-preprocess");
 const ghPages = require('gulp-gh-pages');
 const del = require('del');
+const vendor = require('./vendor.json');
 
 const Paths = {
     baseDir: './',
@@ -31,8 +32,7 @@ gulp.task('reload', function () {
     browserSync.reload();
 });
 
-function scssCompile(scssToolkitSources, cssDestination)
-{
+function scssCompile(scssToolkitSources, cssDestination) {
     return gulp.src(scssToolkitSources)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -65,16 +65,22 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('gh-pages-clean', function(){
-    return del('.publish', { force:true });
+gulp.task('gh-pages-clean', function () {
+    return del('.publish', { force: true });
 });
 
 gulp.task('gh-pages', function () {
-    return gulp.src(['./**/*', '.nojekyll', '!partials/**', '!**.scss'])
+    return gulp.src(['./**/*', '.nojekyll', '!partials/**', '!**.scss', '!node_modules/**'])
         .pipe(ghPages());
 });
 
-gulp.task('build', gulp.series('compile-material-scss', 'compile-scss', 'html'));
+gulp.task('copy-vendor', gulp.series(function () {
+    return gulp.src(vendor.css, { cwd: './node_modules/' }).pipe(gulp.dest('./public/css/'));
+}, function () {
+    return gulp.src(vendor.js, { cwd: './node_modules/' }).pipe(gulp.dest('./public/js/'));
+}));
+
+gulp.task('build', gulp.series('copy-vendor', 'compile-material-scss', 'compile-scss', 'html'));
 
 gulp.task('deploy', gulp.series('build', 'gh-pages-clean', 'gh-pages'));
 
