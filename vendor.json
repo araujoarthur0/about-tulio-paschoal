@@ -8,6 +8,8 @@
     ],
     "css": [
         "slick-carousel/slick/slick.css",
+        "slick-carousel/slick/fonts/slick.woff",
+        "slick-carousel/slick/fonts/slick.ttf",
         "slick-carousel/slick/slick-theme.css"
     ]
 }

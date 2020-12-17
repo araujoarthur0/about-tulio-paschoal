@@ -75,9 +75,9 @@ gulp.task('gh-pages', function () {
 });
 
 gulp.task('copy-vendor', gulp.series(function () {
-    return gulp.src(vendor.css, { cwd: './node_modules/' }).pipe(gulp.dest('./public/css/'));
+    return gulp.src(vendor.css, { cwd: './node_modules/', base: './node_modules/' }).pipe(gulp.dest('./public/css/'));
 }, function () {
-    return gulp.src(vendor.js, { cwd: './node_modules/' }).pipe(gulp.dest('./public/js/'));
+    return gulp.src(vendor.js, { cwd: './node_modules/', base: './node_modules/' }).pipe(gulp.dest('./public/js/'));
 }));
 
 gulp.task('build', gulp.series('copy-vendor', 'compile-material-scss', 'compile-scss', 'html'));
